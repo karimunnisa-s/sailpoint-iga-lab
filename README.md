@@ -50,7 +50,7 @@ Folders appear as each stage is completed, so the repo grows alongside the lab.
 
 ## Write-ups
 
-1. [Deploying a virtual appliance on Google Cloud](docs/01-va-deployment-gcp.md) — why an
+1. [Deploying a virtual appliance on Google Cloud](docs/01-va-deployment-gcp(1).md) — why an
    ARM MacBook can't host it, and the pairing failure that took the longest to diagnose.
    *(Completed: appliance paired and Connected.)*
 

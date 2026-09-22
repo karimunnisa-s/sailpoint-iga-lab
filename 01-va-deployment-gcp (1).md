@@ -46,7 +46,9 @@ valid deployment.
 | Egress | 443 (tenant + updates), 53 (DNS), 123 (NTP) |
 | Cluster | `SailPoint VA` — an existing tenant cluster; this appliance was added as a member |
 
-![Virtual appliance showing Connected in the tenant cluster](../screenshots/va-connected.png)
+<img width="1510" height="897" alt="va-connected" src="https://github.com/user-attachments/assets/b2f60d61-3b4d-4562-a7bc-7681f4ae9262" />
+
+  
 
 *The GCP appliance (10.128.0.2) reporting **Connected** with CCG version 1320. Two earlier
 appliances in the same cluster show Inactive.*

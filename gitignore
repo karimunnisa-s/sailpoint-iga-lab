@@ -1,0 +1,27 @@
+# Secrets — never commit
+.env
+.env.*
+*.key
+*.pem
+*.p12
+credentials.json
+client_secret*.json
+*token*.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large VA artifacts (never belong in git)
+*.vmdk
+*.ova
+*.ovf
+*.vhd

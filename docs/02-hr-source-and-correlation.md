@@ -32,6 +32,9 @@ The three uncorrelated accounts are a temp auditor, a legacy service account and
 an external guest — seeded without an employee ID on purpose, so that something
 *should* fail to correlate. A correlation test where everything matches proves
 very little.
+![Entra accounts: two John Smith accounts correlated to two different identities](../screenshots/02-entra-correlated.png)
+![Entra accounts: the three intended uncorrelated accounts](../screenshots/02-entra-uncorrelated.png)
+![Entra correlation: a single rule, Employee Number equals employeeId. The recommendations panel error is the lagging index from finding 6](../screenshots/02-entra-correlation-rule.png)
 
 ---
 
@@ -332,6 +335,8 @@ correlation declined to guess, which fits every row of that table. I have not
 verified it, so it stays a hypothesis. If it is true, the Entra rule has the same
 weakness the manager lookups had, and the 8 that did correlate did so because
 nobody else held their numbers.
+![Identity E1068 with manager resolved to Charles Miller](../screenshots/02-identity-e1068-manager.png)
+![Manager report: 1 without a manager (the CEO), 0 resolving outside my identities](../screenshots/02-manager-report.png)
 
 ---
 

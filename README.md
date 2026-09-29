@@ -50,19 +50,13 @@ Folders appear as each stage is completed, so the repo grows alongside the lab.
 
 ## Write-ups
 
-1. [Deploying a virtual appliance on Google Cloud](docs/01-va-deployment-gcp%20(1).md) — why an
+1. [Deploying a virtual appliance on Google Cloud](docs/01-va-deployment-gcp.md)— why an
    ARM MacBook can't host it, and the pairing failure that took the longest to diagnose.
    *(Completed: appliance paired and Connected.)*
-
-<!-- Add each write-up here as you finish it:
-2. [Onboarding the authoritative HR source](docs/02-authoritative-hr-source.md)
-3. [Transforms: email, display name and lifecycle state](docs/03-transforms.md)
-4. [Correlation and the orphaned account hunt](docs/04-correlation-orphans.md)
-5. [Role model: birthright and job-based access](docs/05-role-model.md)
-6. [Testing joiner-mover-leaver end to end](docs/06-jml-test.md)
-7. [Certification campaigns and separation of duties](docs/07-governance.md)
-8. [Automating with workflows and the REST API](docs/08-automation.md)
--->
+2. [Building the HR authoritative source](docs/02-hr-source-and-correlation.md) — six
+   Johns merged into one identity, a manager lookup that moved 20 accounts onto other
+   students' identities, and why every correlation key in a shared tenant needs a namespace.
+   *(Completed: 94 identities, 93 managers, Entra correlated 9/3.)*
 
 ## The data
 

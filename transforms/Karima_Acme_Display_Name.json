@@ -1,0 +1,37 @@
+{
+  "name": "Karima Acme Display Name",
+  "type": "concat",
+  "attributes": {
+    "values": [
+      {
+        "type": "firstValid",
+        "attributes": {
+          "values": [
+            {
+              "type": "accountAttribute",
+              "attributes": {
+                "sourceName": "Acme HR - Karima",
+                "attributeName": "preferred_name"
+              }
+            },
+            {
+              "type": "accountAttribute",
+              "attributes": {
+                "sourceName": "Acme HR - Karima",
+                "attributeName": "first_name"
+              }
+            }
+          ]
+        }
+      },
+      " ",
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Acme HR - Karima",
+          "attributeName": "last_name"
+        }
+      }
+    ]
+  }
+}

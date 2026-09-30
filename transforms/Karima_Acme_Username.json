@@ -1,0 +1,16 @@
+{
+  "name": "Karima Acme Username",
+  "type": "concat",
+  "attributes": {
+    "values": [
+      "karima.",
+      {
+        "type": "accountAttribute",
+        "attributes": {
+          "sourceName": "Acme HR - Karima",
+          "attributeName": "employee_id"
+        }
+      }
+    ]
+  }
+}

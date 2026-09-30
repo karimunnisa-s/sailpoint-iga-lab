@@ -1,0 +1,53 @@
+{
+  "name": "Karima Acme Email",
+  "type": "lower",
+  "attributes": {
+    "input": {
+      "type": "concat",
+      "attributes": {
+        "values": [
+          {
+            "type": "replace",
+            "attributes": {
+              "regex": "[^A-Za-z]",
+              "replacement": "",
+              "input": {
+                "type": "decomposeDiacriticalMarks",
+                "attributes": {
+                  "input": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                      "sourceName": "Acme HR - Karima",
+                      "attributeName": "first_name"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          ".",
+          {
+            "type": "replace",
+            "attributes": {
+              "regex": "[^A-Za-z]",
+              "replacement": "",
+              "input": {
+                "type": "decomposeDiacriticalMarks",
+                "attributes": {
+                  "input": {
+                    "type": "accountAttribute",
+                    "attributes": {
+                      "sourceName": "Acme HR - Karima",
+                      "attributeName": "last_name"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "@acme.example"
+        ]
+      }
+    }
+  }
+}

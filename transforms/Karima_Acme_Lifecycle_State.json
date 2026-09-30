@@ -1,0 +1,20 @@
+{
+  "name": "Karima Acme Lifecycle State",
+  "type": "lookup",
+  "attributes": {
+    "table": {
+      "Active": "active",
+      "Prehire": "prehire",
+      "Leave of Absence": "loa",
+      "Terminated": "inactive",
+      "default": "inactive"
+    },
+    "input": {
+      "type": "accountAttribute",
+      "attributes": {
+        "sourceName": "Acme HR - Karima",
+        "attributeName": "status"
+      }
+    }
+  }
+}

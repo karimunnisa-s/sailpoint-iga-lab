@@ -1,0 +1,10 @@
+event,employee_id,what_should_happen
+JOINER,E1095,"New Accounts Payable Clerk in Finance, starts 2026-10-12"
+JOINER,E1096,"New Software Engineer in Engineering, starts 2026-10-12"
+MOVER,E1052,Sales -> Finance (Financial Analyst): old Sales access should be removed
+MOVER,E1011,Engineering -> IT (IAM Analyst)
+MOVER,E1005,Location change -> London (attribute sync only)
+LEAVER,E1006,Terminated 2026-10-09: disable all accounts
+RETURN,E1062,Returned from leave -> Active
+LEAVE,E1066,Went on leave of absence
+NAME CHANGE,E1053,Last name Haddad -> Okonkwo: does email/username change?

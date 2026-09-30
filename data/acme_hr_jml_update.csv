@@ -1,0 +1,97 @@
+employee_id,first_name,last_name,preferred_name,department,job_title,job_code,cost_center,manager_id,location,employment_type,hire_date,termination_date,status
+E1001,Karen,Whitfield,,Executive,Chief Executive Officer,JC-CEO,CC100,,Chicago,Employee,2014-03-03,,Active
+E1002,James,Wilson,,Engineering,VP of Engineering,JC-VOE,CC200,E1001,Chicago,Employee,2018-06-04,,Active
+E1003,Barbara,Nguyen,,Engineering,Engineering Manager,JC-EM,CC200,E1002,Austin,Employee,2017-05-20,,Active
+E1004,Arjun,Williams,,Engineering,Engineering Manager,JC-EM,CC200,E1002,Austin,Employee,2024-02-20,,Active
+E1005,Barbara,Davis,,Engineering,QA Engineer,JC-QE,CC200,E1003,London,Employee,2017-09-05,,Active
+E1006,Amara,Martin,,Engineering,Software Engineer,JC-SE,CC200,E1004,Chicago,Employee,2018-09-23,2026-10-09,Terminated
+E1007,Patricia,Cohen,,Engineering,Software Engineer,JC-SE,CC200,E1003,Chicago,Employee,2021-02-07,2026-06-06,Terminated
+E1008,Kenji,Lopez,,Engineering,Software Engineer,JC-SE,CC200,E1004,Toronto,Employee,2017-02-20,,Active
+E1009,Linda,Jackson,,Engineering,QA Engineer,JC-QE,CC200,E1004,Austin,Employee,2025-01-02,,Active
+E1010,Aisha,Miller,,Engineering,QA Engineer,JC-QE,CC200,E1004,Remote-US,Employee,2020-12-08,,Active
+E1011,Ahmed,Okafor,,IT,IAM Analyst,JC-IA,CC600,E1063,Austin,Employee,2022-09-27,,Active
+E1012,Charles,Kowalski,,Engineering,Senior Software Engineer,JC-SSE,CC200,E1004,Austin,Employee,2016-12-17,,Active
+E1013,Hannah,Kowalski,,Engineering,Software Engineer,JC-SE,CC200,E1004,London,Employee,2021-07-27,,Active
+E1014,Sarah,Kim,,Engineering,DevOps Engineer,JC-DE,CC200,E1003,London,Employee,2023-08-09,,Active
+E1015,Mary-Jane,Watson-Lee,,Engineering,DevOps Engineer,JC-DE,CC200,E1003,Remote-US,Employee,2017-08-06,,Active
+E1016,Noah,Williams,,Engineering,Senior Software Engineer,JC-SSE,CC200,E1003,Austin,Employee,2019-06-03,,Active
+E1017,Zara,Reyes,,Engineering,Senior Software Engineer,JC-SSE,CC200,E1004,Austin,Employee,2021-03-15,,Active
+E1018,Jennifer,Anderson,,Engineering,QA Engineer,JC-QE,CC200,E1004,Austin,Employee,2020-01-02,,Active
+E1019,Yuki,Reyes,,Engineering,DevOps Engineer,JC-DE,CC200,E1003,Austin,Employee,2025-11-19,,Active
+E1020,Ines,Mensah,,Engineering,Senior Software Engineer,JC-SSE,CC200,E1003,Austin,Employee,2025-09-12,,Active
+E1021,Robert,Haddad,,Engineering,Senior Software Engineer,JC-SSE,CC200,E1003,Chicago,Employee,2025-08-02,,Active
+E1022,Nina,Kim,,Engineering,Senior Software Engineer,JC-SSE,CC200,E1004,Austin,Employee,2026-01-11,,Active
+E1023,Robert,Fischer,,Engineering,DevOps Engineer,JC-DE,CC200,E1003,Austin,Employee,2024-01-31,,Active
+E1024,Mateo,Fischer,,Finance,VP of Finance,JC-VOF,CC300,E1001,London,Employee,2024-06-21,,Active
+E1025,Kenji,Miller,,Finance,Finance Manager,JC-FM,CC300,E1024,London,Employee,2024-06-13,,Active
+E1026,Yuki,Lopez,,Finance,Finance Manager,JC-FM,CC300,E1024,Toronto,Employee,2020-08-21,,Active
+E1027,Olga,Fischer,,Finance,Financial Analyst,JC-FA,CC300,E1025,Chicago,Employee,2024-08-28,,Active
+E1028,John,Larsen,,Finance,Payroll Specialist,JC-PS,CC300,E1026,Chicago,Employee,2017-07-09,,Active
+E1029,Karen,Haddad,,Finance,Accountant,JC-A,CC300,E1026,Austin,Contractor,2015-09-01,,Active
+E1030,Jessica,Hernandez,,Finance,Financial Analyst,JC-FA,CC300,E1026,London,Employee,2022-06-13,,Active
+E1031,Zara,Wilson,,Finance,Payroll Specialist,JC-PS,CC300,E1025,Austin,Employee,2024-02-28,,Active
+E1032,Sarah,Okafor,,Finance,Financial Analyst,JC-FA,CC300,E1025,London,Employee,2016-07-13,,Active
+E1033,John,Thomas,,Finance,Financial Analyst,JC-FA,CC300,E1026,Chicago,Employee,2022-12-05,,Active
+E1034,Kenji,Martinez,,Finance,Payroll Specialist,JC-PS,CC300,E1025,Austin,Employee,2016-07-04,,Active
+E1035,Jessica,Garcia,,Finance,Payroll Specialist,JC-PS,CC300,E1026,Chicago,Employee,2021-05-04,,Active
+E1036,Fatima,Larsen,,Finance,Financial Analyst,JC-FA,CC300,E1025,Chicago,Employee,2025-01-22,,Active
+E1037,William,Haddad,,Finance,Financial Analyst,JC-FA,CC300,E1025,Remote-US,Employee,2021-10-16,,Active
+E1038,Sarah,Kowalski,,Human Resources,VP of Human Resources,JC-VOHR,CC400,E1001,Remote-US,Employee,2025-02-14,,Active
+E1039,Jessica,Okafor,,Human Resources,Human Resources Manager,JC-HRM,CC400,E1038,London,Employee,2023-02-18,,Active
+E1040,Kenji,Okafor,,Human Resources,Recruiter,JC-R,CC400,E1039,London,Employee,2026-10-25,,Prehire
+E1041,Zara,Ivanova,,Human Resources,Recruiter,JC-R,CC400,E1039,Toronto,Employee,2024-04-18,,Active
+E1042,Karen,Davis,,Human Resources,Recruiter,JC-R,CC400,E1039,Toronto,Employee,2017-10-19,,Active
+E1043,Zara,Nguyen,,Human Resources,HRIS Analyst,JC-HA,CC400,E1039,Remote-US,Employee,2022-03-26,,Active
+E1044,Sarah,Patel,,Human Resources,Recruiter,JC-R,CC400,E1039,Toronto,Contractor,2025-05-10,,Active
+E1045,Ahmed,Lopez,,Human Resources,HR Generalist,JC-HG,CC400,E1039,Austin,Employee,2023-04-11,,Active
+E1046,Robert,Chen,,Sales,VP of Sales,JC-VOS,CC500,E1001,Chicago,Employee,2018-02-15,,Active
+E1047,Priya,Moore,,Sales,Sales Manager,JC-SM,CC500,E1046,Austin,Employee,2022-09-02,,Active
+E1048,Charles,Cohen,,Sales,Sales Manager,JC-SM,CC500,E1046,Austin,Employee,2023-09-06,,Active
+E1049,David,Reyes,,Sales,Sales Development Rep,JC-SDR,CC500,E1048,London,Employee,2026-10-27,,Prehire
+E1050,Karen,Mensah,,Sales,Account Executive,JC-AE,CC500,E1047,Toronto,Employee,2016-06-23,,Active
+E1051,Wei,Wilson,,Sales,Account Executive,JC-AE,CC500,E1048,Toronto,Employee,2019-12-10,,Active
+E1052,Sarah,Jones,,Finance,Financial Analyst,JC-FA,CC300,E1025,London,Employee,2021-08-23,,Active
+E1053,Lucas,Okonkwo,,Sales,Sales Engineer,JC-SE,CC500,E1048,Chicago,Employee,2026-03-13,,Active
+E1054,Fatima,Cohen,,Sales,Sales Engineer,JC-SE,CC500,E1047,Remote-US,Employee,2026-10-20,,Prehire
+E1055,Aisha,Martinez,,Sales,Sales Development Rep,JC-SDR,CC500,E1048,Austin,Employee,2022-08-11,,Active
+E1056,Karen,Johnson,,Sales,Account Executive,JC-AE,CC500,E1048,Chicago,Employee,2023-01-03,,Active
+E1057,Michael,Nakamura,,Sales,Sales Engineer,JC-SE,CC500,E1048,London,Employee,2025-10-24,2026-08-02,Terminated
+E1058,Wei,Williams,,Sales,Sales Development Rep,JC-SDR,CC500,E1048,Austin,Employee,2018-01-28,,Active
+E1059,Thomas,Smith,,Sales,Sales Development Rep,JC-SDR,CC500,E1048,Chicago,Employee,2024-02-24,,Active
+E1060,Luis,Fischer,,Sales,Sales Development Rep,JC-SDR,CC500,E1047,Chicago,Employee,2022-02-15,,Active
+E1061,Jennifer,Murphy,,Sales,Sales Engineer,JC-SE,CC500,E1048,Chicago,Employee,2026-03-12,,Active
+E1062,Diego,Mensah,,IT,Chief Information Officer,JC-CIO,CC600,E1001,Chicago,Employee,2015-12-19,,Active
+E1063,Charles,Miller,,IT,IT Manager,JC-IM,CC600,E1062,Chicago,Employee,2025-05-01,,Active
+E1064,Michael,Lopez,,IT,IT Support Analyst,JC-ISA,CC600,E1063,Chicago,Employee,2025-11-05,,Active
+E1065,Mary,Cohen,,IT,Systems Administrator,JC-SA,CC600,E1063,Toronto,Contractor,2019-07-05,,Active
+E1066,Sofia,Jackson,,IT,IAM Analyst,JC-IA,CC600,E1063,Austin,Employee,2018-03-05,,Leave of Absence
+E1067,Grace,Rossi,,IT,Systems Administrator,JC-SA,CC600,E1063,Austin,Employee,2017-12-27,,Active
+E1068,John,Smith,,IT,Systems Administrator,JC-SA,CC600,E1063,Austin,Employee,2019-01-18,,Active
+E1069,Olga,Murphy,,IT,IT Support Analyst,JC-ISA,CC600,E1063,Remote-US,Contractor,2020-04-08,,Active
+E1070,John,Silva,,IT,IT Support Analyst,JC-ISA,CC600,E1063,Remote-US,Employee,2018-12-13,,Active
+E1071,John,Smith,,IT,IAM Analyst,JC-IA,CC600,E1063,Toronto,Employee,2016-06-03,,Active
+E1072,Lucas,Johnson,,Operations,VP of Operations,JC-VOO,CC700,E1001,London,Employee,2018-03-10,,Active
+E1073,Richard,Haddad,,Operations,Operations Manager,JC-OM,CC700,E1072,Toronto,Employee,2018-09-28,,Active
+E1074,Joseph,Taylor,,Operations,Operations Analyst,JC-OA,CC700,E1073,Remote-US,Employee,2026-03-16,,Active
+E1075,Kenji,Reyes,,Operations,Facilities Coordinator,JC-FC,CC700,E1073,Chicago,Employee,2024-10-06,,Leave of Absence
+E1076,Amara,Garcia,,Operations,Operations Analyst,JC-OA,CC700,E1073,London,Employee,2020-02-09,,Active
+E1077,Luis,Nguyen,,Operations,Facilities Coordinator,JC-FC,CC700,E1073,Toronto,Employee,2025-04-03,,Leave of Absence
+E1078,Ravi,Nguyen,,Operations,Facilities Coordinator,JC-FC,CC700,E1073,Toronto,Employee,2022-12-01,2026-09-09,Terminated
+E1079,Omar,Williams,,Operations,Facilities Coordinator,JC-FC,CC700,E1073,Chicago,Employee,2026-05-25,,Active
+E1080,Aisha,Silva,,Operations,Operations Analyst,JC-OA,CC700,E1073,Toronto,Employee,2021-04-11,,Active
+E1081,Carlos,Taylor,,Operations,Facilities Coordinator,JC-FC,CC700,E1073,Austin,Contractor,2024-10-12,,Active
+E1082,Nina,Thomas,,Legal,VP of Legal,JC-VOL,CC800,E1001,Chicago,Employee,2024-08-13,,Active
+E1083,Chloe,Anderson,,Legal,Legal Manager,JC-LM,CC800,E1082,Austin,Employee,2018-01-10,,Active
+E1084,James,Nguyen,,Legal,Paralegal,JC-P,CC800,E1083,Chicago,Employee,2017-12-16,,Active
+E1085,Sofia,Williams,,Legal,Paralegal,JC-P,CC800,E1083,London,Employee,2017-10-06,,Active
+E1086,Susan,Johnson,,Legal,Counsel,JC-C,CC800,E1083,Toronto,Employee,2017-07-15,,Active
+E1087,Sofia,Ivanova,,Marketing,VP of Marketing,JC-VOM,CC900,E1001,Remote-US,Employee,2023-11-06,,Active
+E1088,Karen,Chen,,Marketing,Marketing Manager,JC-MM,CC900,E1087,London,Employee,2015-10-20,,Active
+E1089,Elizabeth,Silva,,Marketing,Marketing Specialist,JC-MS,CC900,E1088,Toronto,Employee,2021-04-06,2026-09-07,Terminated
+E1090,John,Jones,,Marketing,Marketing Specialist,JC-MS,CC900,E1088,Chicago,Employee,2023-11-07,,Active
+E1091,Aisha,Hernandez,,Marketing,Marketing Specialist,JC-MS,CC900,E1088,Remote-US,Contractor,2021-02-01,,Active
+E1092,Sean,O'Brien,,Marketing,Content Strategist,JC-CS,CC900,E1088,Chicago,Employee,2019-09-20,,Active
+E1093,José,García,,Marketing,Marketing Specialist,JC-MS,CC900,E1088,Chicago,Employee,2023-01-09,,Active
+E1094,Elizabeth,Van Der Berg,Liz,Marketing,Content Strategist,JC-CS,CC900,E1088,Chicago,Employee,2022-03-05,,Active
+E1095,Omar,Tanaka,,Finance,Accounts Payable Clerk,JC-APC,CC300,E1025,Chicago,Employee,2026-10-12,,Prehire
+E1096,Priya,Martin,,Engineering,Software Engineer,JC-SE,CC200,E1003,Chicago,Employee,2026-10-12,,Prehire

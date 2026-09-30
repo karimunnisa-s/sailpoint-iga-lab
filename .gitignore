@@ -25,3 +25,8 @@ Thumbs.db
 *.ova
 *.ovf
 *.vhd
+
+# Local credentials — never commit
+isc-env.ps1
+scripts/isc-env.ps1
+*.local.ps1

@@ -292,30 +292,63 @@ wrong end.
 
 ---
 
-## Open items
+## One workaround that silently broke another layer
 
-**Manager is empty on identities that have one.** An identity whose
-`manager_key` is populated, and whose manager exists in the same population,
-shows `MANAGER --`:
+Every identity showed `MANAGER --`, despite the identity profile mapping Manager
+to an account attribute that was populated with a manager who exists in the same
+population:
 
 ![Identity mappings](../screenshots/04-03-identity-mappings-intact.png)
 
-The source schema's manager attribute is `manager_key`, not the `manager_id`
-column the original data carried — which raises a worse possibility: that
-manager data never resolved on this source, and that an earlier PASS from my own
-`Test-ManagerGraph.ps1` was measuring an empty graph rather than a sound one. A
-check that confirms what you hoped is worse than no check. This needs re-running
-and the script needs a case that fails when the graph is empty.
+The mapping was correct. The value was wrong in a way nothing reported.
 
-It also matters for the next milestone: access requests route to the requester's
-manager, and a dangling reference leaves a request with no approver and no
-error.
+**ISC resolves a manager reference against the identity's username**, not
+against the account identifier. Every identity in this lab carries a `karima.`
+username prefix — a workaround for usernames being unique tenant-wide in a
+shared environment, which has nothing to do with org hierarchy. So a manager key
+of `E1001` matched no identity, while `karima.E1001` matches exactly one.
+
+Carrying the prefix into the manager key fixed it:
+
+```
+no manager:      1
+foreign manager: 0
+
+Identities with no manager:
+  Karen Whitfield
+
+PASS  manager graph is sound.
+```
+
+One manager-less identity, which is the person at the top, and no references
+pointing outside the population.
+
+**This is the most realistic failure in the lab.** A fix for one constraint — 
+username collisions in the identity layer — invalidated an assumption two layers
+away in manager resolution, with no error anywhere. The symptom was a blank
+field on a details page that nobody would look at until an access request failed
+to route. Nothing in the product connects those two facts, and nothing
+documented warns you.
+
+It matters immediately for the next milestone: access requests route to the
+requester's manager, and a reference that resolves to nothing leaves a request
+sitting with no approver and no error.
+
+---
+
+## An open item
 
 **`Test-SourceIdentityIntegrity.ps1` has a latent bug.** `Invoke-RestMethod` can
 return a result array as a single object; wrapping it in `@()` then yields a
 count of 1 rather than 94, and the script would report one account, one identity
 and print **PASS**. Fixed by forcing unrolling in the pagination helper — but it
 is exactly the class of silent wrong answer the script exists to catch.
+
+`Test-ManagerGraph.ps1` does not have the equivalent weakness: it compares the
+manager-less count to an expected root count with exact equality, so a
+completely empty graph fails rather than passes. Worth stating, because I
+assumed otherwise and was wrong — a check is only trustworthy if you have read
+the condition, not if you remember writing it.
 
 ---
 

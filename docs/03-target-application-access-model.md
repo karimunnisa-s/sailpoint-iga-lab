@@ -218,68 +218,57 @@ or can request, so bundling everything means the only available decision is
 payroll without being able to modify it is a coherent role, but modifying it
 without viewing it is not, so those two travel together.
 
-**Two things I could not complete, recorded rather than glossed:**
+**Two things I could not complete in the console, and how both resolved:**
 
-**Owners are set to the trainer's account.** My admin login has no identity in
-this tenant, so it cannot be selected as an owner. Every access profile is
-therefore owned by `vijay`. This is not cosmetic: the owner is the person a
-certification campaign routes to, so as it stands my objects would send their
-reviews to someone who has no idea what they are. The fix is to assign an Acme
-identity, which is blocked on the identities existing.
+**Owners could not be set to me.** My admin login has no identity in this
+tenant, so it cannot be selected as an owner, and the profiles were initially
+owned by the trainer's account. That is not cosmetic — the owner is who a
+certification campaign routes to, so the reviews would have gone to someone with
+no basis for answering. Resolved by assigning an Acme business identity, the VP
+of Finance, once the identities existed.
 
-**I could not mark the profiles requestable.** The option was not available.
-Whether that is a licence limitation on this training tenant or a configuration
-I have not found, I do not yet know, and I would rather write that than invent a
-cause. It matters because the access-request and approval demonstration depends
-on it.
+**The profiles could not be marked requestable.** The option was not available
+in the UI, and I could not tell whether that was a licence limitation on this
+training tenant or a setting I had not found. It was neither:
+`POST /v3/access-profiles` sets `requestable` without complaint. A UI gap, not a
+tenant restriction — see [write-up 4](04-role-modelling-and-blast-radius.md),
+where the access model is rebuilt from a definition file with the flag set
+correctly on all five profiles.
+
+**And one I did not notice until later.** The entitlement file carries a
+`privileged` column, and after aggregation all six entitlements read
+`privileged = false`. The flag has to be set on the entitlement object; the data
+does not supply it. Worth knowing before a certification campaign, because
+privileged access is exactly what a reviewer is meant to scrutinise.
 
 ---
 
-## Where this stopped, and why
+## Where this leads
 
-Roles, the separation-of-duties policy and the leaver test are built in the
-plan and not in the tenant. On 14 October the Acme HR identity profile was
-deleted from the shared training tenant — not by me — which deleted all 94
-identities. The source accounts survived; the identities that gave them meaning
-did not.
+The application is loaded, correlated and described. Nobody has been granted
+anything yet, which is the next milestone: access profiles into roles, roles
+scoped to the right population, and the distinction between access you receive
+because of who you are and access you receive because you asked and someone
+approved.
 
-Symptoms, in the order I met them: API authentication failing with
-`{"error": "invalid_user", "error_description": "The PAT owner is invalid"}`;
-then an identity I needed returning no results; then a search for `karima.`,
-the username prefix that marks every identity in my population, returning zero
-of an expected 94. The tenant was carrying 526 identities against a 500 cap,
-which makes a cleanup the most plausible explanation.
+That is [write-up 4](04-role-modelling-and-blast-radius.md), which also covers
+the thing I did not expect to be the most useful finding of the exercise —
+that role membership criteria are evaluated against every identity in the
+tenant, so the obvious criteria for these roles would have granted to 192
+identities against an intended 84.
 
-Three things are worth taking from that.
+The separation-of-duties policy and the leaver test follow. The data is already
+carrying both: three accounts hold `Expense_Submit` and `AP_Approver` together,
+and one terminated employee still has a live Finance account with active
+entitlements.
 
-**A personal access token inherits the lifecycle of the person it belongs to.**
-Disabling or removing an identity disables its tokens — deliberately, and
-rightly, since revoking a person should revoke their access. But it means
-automation built on a personal token stops the moment that person's identity
-changes, with an error that names neither the cause nor the remedy. Re-enabling
-the identity does not restore the tokens. The correct construction is an API
-client whose credentials belong to the tenant rather than to an employee. This
-is the standard argument for service accounts and I had read it several times
-without it meaning anything.
-
-**My tooling failed less usefully than it could have.** `Connect-ISC` discarded
-the response body and surfaced only "401 (Unauthorized)", so the diagnostic
-string — `invalid_user` — was thrown away at the exact moment it mattered. It
-also set its header variable in function scope, so it could return
-successfully while leaving the caller unauthenticated, and a stale variable from
-an earlier session then produced a plausible-looking token expiry that sent me
-chasing the wrong fault for an hour. Both are now fixed: distinct messages for
-401, 403 and 404, a global assignment, and a live API call before the function
-is allowed to return.
-
-**The configuration was recoverable because it was written down.** Transforms
-exported as JSON, the two identity-profile mappings that had broken silently
-once already recorded by name, the source schema settings documented, the
-expected counts stated. Rebuilding is mechanical and is captured in
-[the recovery runbook](identity-profile-recovery-runbook.md). Without those
-notes it would have been a rediscovery of the same four failures at the same
-cost. That is the first time this repository has been useful as an operational
-asset rather than as a record.
+One piece of tooling came out of this write-up rather than the lab: my own
+`Test-SourceIdentityIntegrity.ps1` reports FAIL on this source, because it
+checks that every account produced an identity. That is correct for an
+authoritative source and wrong for a target application, where unowned accounts
+are the finding rather than the defect. The check encodes an assumption it never
+states. Worth fixing, and worth noticing that a check can be confidently wrong
+in a direction nobody looks at.
 
 ---
 
